@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="174" height="26" viewBox="0 0 174 26" fill="none">
+  <g>
+    <!-- Circular Checkmark Icon -->
+    <circle cx="13" cy="13" r="12" stroke="#3DD9EB" stroke-width="2" fill="none" />
+    <path d="M9 13.5L12 16.5L17 10" stroke="#3DD9EB" stroke-width="2" fill="none" />
+    <!-- Text: Exam AI -->
+    <text x="30" y="18" fill="#615DFF" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Exam</text>
+    <text x="90" y="18" fill="#3DD9EB" font-family="Arial, sans-serif" font-size="20" font-weight="bold">AI</text>
+  </g>
+</svg>

@@ -1,11 +1,10 @@
 import { fetchBaseQuery, createApi } from '@reduxjs/toolkit/query/react';
 
-const baseQuery = fetchBaseQuery({ baseUrl: '' });
+const baseQuery = fetchBaseQuery({ baseUrl: 'https://examai-main-backend.onrender.com' });
 
 export const apiSlice = createApi({
   baseQuery,
   tagTypes: ['User'],
-  // it like a prent to other api
-  // it a build in builder
+  // it acts as a parent for other APIs
   endpoints: (builder) => ({}),
 });

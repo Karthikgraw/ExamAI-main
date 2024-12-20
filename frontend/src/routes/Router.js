@@ -69,6 +69,9 @@ const Router = createBrowserRouter(
       <Route path="*" element={<Navigate to="/auth/404" />} />
     </>,
   ),
+  {
+    basename: '/', // Change this to '/frontend' if your app is deployed to a subdirectory
+  }
 );
 
 export default Router;

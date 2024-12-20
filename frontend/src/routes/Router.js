@@ -23,6 +23,9 @@ const ExamLogPage = Loadable(lazy(() => import('./../views/teacher/ExamLogPage')
 const AddQuestions = Loadable(lazy(() => import('./../views/teacher/AddQuestions')));
 
 /* ****Routes**** */
+import PrivateRoute from '../views/authentication/PrivateRoute'; // Import PrivateRoute
+import TeacherRoute from '../views/authentication/TeacherRoute'; // Import TeacherRoute
+
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <>

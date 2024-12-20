@@ -1,10 +1,14 @@
-import { Navigate, Outlet, useLocation } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const TeacherRoute = () => {
   const { userInfo } = useSelector((state) => state.auth);
-  const isTeacher = userInfo.role === 'teacher';
 
+  // Check if userInfo exists and if the user is a teacher
+  const isTeacher = userInfo && userInfo.role === 'teacher';
+
+  // If not a teacher, redirect to the dashboard
   return isTeacher ? <Outlet /> : <Navigate to="/dashboard" replace />;
 };
+
 export default TeacherRoute;

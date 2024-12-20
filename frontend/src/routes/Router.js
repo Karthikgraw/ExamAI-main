@@ -2,6 +2,10 @@ import React, { lazy } from 'react';
 import { Navigate, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 import Loadable from '../layouts/full/shared/loadable/Loadable';
 
+/* ****Routes**** */
+import PrivateRoute from '../views/authentication/PrivateRoute'; // Import PrivateRoute
+import TeacherRoute from '../views/authentication/TeacherRoute'; // Import TeacherRoute
+
 /* ***Layouts**** */
 const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout')));
 const FullLayout = Loadable(lazy(() => import('../layouts/full/FullLayout')));
@@ -21,10 +25,6 @@ const UserAccount = Loadable(lazy(() => import('../views/authentication/UserAcco
 const CreateExamPage = Loadable(lazy(() => import('./../views/teacher/CreateExamPage')));
 const ExamLogPage = Loadable(lazy(() => import('./../views/teacher/ExamLogPage')));
 const AddQuestions = Loadable(lazy(() => import('./../views/teacher/AddQuestions')));
-
-/* ****Routes**** */
-import PrivateRoute from '../views/authentication/PrivateRoute'; // Import PrivateRoute
-import TeacherRoute from '../views/authentication/TeacherRoute'; // Import TeacherRoute
 
 const Router = createBrowserRouter(
   createRoutesFromElements(

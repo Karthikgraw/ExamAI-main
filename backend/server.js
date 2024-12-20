@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import path from "path";
 import cors from "cors";
+import { fileURLToPath } from "url"; // Import this for ES module compatibility
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 import connectDB from "./config/db.js";
 import cookieParser from "cookie-parser";
@@ -33,7 +34,8 @@ app.use("/api/exams", examRoutes);
 
 // Serve Frontend in Production
 if (process.env.NODE_ENV === "production") {
-  const __dirname = path.resolve();
+  const __filename = fileURLToPath(import.meta.url); // Fix for ES modules
+  const __dirname = path.dirname(__filename); // Fix for ES modules
   app.use(express.static(path.join(__dirname, "/frontend/build")));
 
   app.get("*", (req, res) =>
